@@ -5,9 +5,10 @@ import 'package:soundpool/soundpool.dart';
 // ignore: avoid_classes_with_only_static_members
 class SoundHelper {
   static final Soundpool _soundpool = Soundpool.fromOptions(
-      options: SoundpoolOptions(
-    streamType: StreamType.music,
-  ));
+    options: const SoundpoolOptions(
+      streamType: StreamType.music,
+    ),
+  );
   static late int _beepLowId;
   static late int _beepHighId;
   static late int _tickId;
@@ -43,7 +44,7 @@ class SoundHelper {
   static void playDouble() {
     if (useSound) {
       _soundpool.play(_beepLowId);
-      Future.delayed(Duration(milliseconds: 200))
+      Future.delayed(const Duration(milliseconds: 200))
           .then((value) => _soundpool.play(_beepLowId));
     }
   }
@@ -51,10 +52,12 @@ class SoundHelper {
   static void playTriple() {
     if (useSound) {
       _soundpool.play(_beepHighId);
-      Future.delayed(Duration(milliseconds: 150))
+      Future.delayed(const Duration(milliseconds: 150))
           .then((value) => _soundpool.play(_beepHighId))
-          .then((value) => Future.delayed(Duration(milliseconds: 150))
-              .then((value) => _soundpool.play(_beepHighId)));
+          .then(
+            (value) => Future.delayed(const Duration(milliseconds: 150))
+                .then((value) => _soundpool.play(_beepHighId)),
+          );
     }
   }
 }

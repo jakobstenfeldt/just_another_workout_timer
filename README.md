@@ -4,7 +4,9 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-[![Crowdin](https://badges.crowdin.net/just_another_workout_timer/localized.svg)](https://crowdin.com)
+<a href="https://weblate.bblock.dev/engage/just-another-workout-timer/">
+<img src="https://weblate.bblock.dev/widgets/just-another-workout-timer/-/app/svg-badge.svg" alt="Übersetzungsstatus" />
+</a>
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/X8X8827HU)
 ![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/blockbasti/just_another_workout_timer/CI/main?style=for-the-badge)
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/blockbasti/just_another_workout_timer?style=for-the-badge)
@@ -95,10 +97,9 @@ Contributions are what make the open source community such an amazing place to l
 ### Building the app
 
 1. Run `flutter pub get`
-2. Run `./scripts/generate_code.sh` or 
-`flutter pub run flutter_oss_licenses:generate.dart` and
-`flutter pub run intl_utils:generate` to generate licenses and translations
-3. Run `flutter build apk` or run using your IDE
+2. Install [script_runner](https://pub.dev/packages/script_runner) by running `flutter pub global activate script_runner`
+3. Run `scr build`
+4. Run `flutter build apk` or run using your IDE
 
 <!-- LICENSE -->
 ## License

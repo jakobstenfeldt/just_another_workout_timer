@@ -10,14 +10,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-java@v1
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
         with:
-          java-version: "14.x"
-      - uses: subosito/flutter-action@v1
+          distribution: "temurin"
+          java-version: "21.x"
+          cache: "gradle"
+      - uses: subosito/flutter-action@v2
         with:
           channel: "stable"
-      - uses: actions/cache@v2
+      - uses: actions/cache@v4
         with:
           path: /opt/hostedtoolcache/flutter
           key: flutter-install-cache
@@ -26,13 +28,14 @@ jobs:
         run: |
           flutter config --no-analytics
           flutter pub get
-          sh ./scripts/generate_code.sh
+          dart pub global activate script_runner
+          scr build
 
       - name: Build APKs
         run: flutter build apk --build-number $(printf '%(%Y%m%d)T\n' -1) --debug
 
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v2.2.2
+        uses: actions/upload-artifact@v4
         with:
           name: APK
           path: ./build/app/outputs/apk/debug/app-debug.apk

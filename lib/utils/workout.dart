@@ -1,17 +1,18 @@
 import 'package:json_annotation/json_annotation.dart';
 import 'package:uuid/uuid.dart';
 
-part 'workout.g.dart';
+part '../workout.g.dart';
 
 @JsonSerializable(explicitToJson: true)
 class Workout {
   static const fileVersion = 2;
 
-  Workout(
-      {this.title = 'Workout',
-      List<Set>? sets,
-      this.version = fileVersion,
-      this.position = -1}) {
+  Workout({
+    this.title = 'Workout',
+    List<Set>? sets,
+    this.version = fileVersion,
+    this.position = -1,
+  }) {
     this.sets = sets ?? [Set()];
   }
 
@@ -29,7 +30,7 @@ class Workout {
   int get duration {
     var duration = 0;
 
-    sets.forEach((set) => {duration += set.duration});
+    sets.forEach((set) => duration += set.duration);
 
     return duration;
   }
@@ -51,7 +52,7 @@ class Set {
     this.repetitions = 1,
     List<Exercise>? exercises,
   }) {
-    this.id = id ?? Uuid().v4();
+    this.id = id ?? const Uuid().v4();
     this.exercises = exercises ?? [Exercise()];
   }
 
@@ -67,7 +68,7 @@ class Set {
   int get duration {
     var duration = 0;
 
-    exercises.forEach((exercise) => {duration += exercise.duration});
+    exercises.forEach((exercise) => duration += exercise.duration);
 
     return duration * repetitions;
   }
@@ -79,7 +80,7 @@ class Set {
 @JsonSerializable(explicitToJson: true)
 class Exercise {
   Exercise({String? id, this.name = 'Exercise', this.duration = 30}) {
-    this.id = id ?? Uuid().v4();
+    this.id = id ?? const Uuid().v4();
   }
 
   @JsonKey(required: true)

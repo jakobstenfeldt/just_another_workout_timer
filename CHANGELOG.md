@@ -1,3 +1,65 @@
+# [1.13.0](https://github.com/blockbasti/just_another_workout_timer/compare/v1.12.0...v1.13.0) (2023-09-29)
+
+
+### Features
+
+* allow different TTS engine (fixes [#141](https://github.com/blockbasti/just_another_workout_timer/issues/141)) ([53f54d0](https://github.com/blockbasti/just_another_workout_timer/commit/53f54d01560f3ca54c3ccd7c9239a58232f2fe15))
+
+
+
+# [1.12.0](https://github.com/blockbasti/just_another_workout_timer/compare/v1.11.2...v1.12.0) (2023-07-22)
+
+
+### Bug Fixes
+
+* update license page ([3a4ba7c](https://github.com/blockbasti/just_another_workout_timer/commit/3a4ba7c6963e24756033d9a23ed39c490e44fd81))
+* update translations ([#121](https://github.com/blockbasti/just_another_workout_timer/issues/121)) ([ba8ec6c](https://github.com/blockbasti/just_another_workout_timer/commit/ba8ec6c3bb4e56cd2943245ed1526a7ecec659f4))
+
+
+### Features
+
+* allow sharing workouts (closes [#118](https://github.com/blockbasti/just_another_workout_timer/issues/118)) ([4cb9f9d](https://github.com/blockbasti/just_another_workout_timer/commit/4cb9f9d226a7c785147c3245758a039716a1943c))
+* change theme of icon and splash screen ([a414f37](https://github.com/blockbasti/just_another_workout_timer/commit/a414f37b91b9a8575f216fb4f67ec2b9b53cc863))
+* Material 3 and Material You ([4a90728](https://github.com/blockbasti/just_another_workout_timer/commit/4a90728348010fdbc991fb579a5478f3c8b10137))
+* small redesign to builder page ([6ae6f99](https://github.com/blockbasti/just_another_workout_timer/commit/6ae6f9991393f8951f4139f6002bb506a7465c60))
+* use nord theme ([998f625](https://github.com/blockbasti/just_another_workout_timer/commit/998f625e12067fc3b29bf2e2606b5dccc252a076))
+
+
+
+## [1.11.2](https://github.com/blockbasti/just_another_workout_timer/compare/v1.11.1...v1.11.2) (2022-03-17)
+
+
+### Bug Fixes
+
+* Fix loading of backup files with malformed utf8 encoding ([#114](https://github.com/blockbasti/just_another_workout_timer/issues/114)) ([e80c23d](https://github.com/blockbasti/just_another_workout_timer/commit/e80c23d0ceca27948f48b8d309e9505bb854a991))
+* IT translation update ([#113](https://github.com/blockbasti/just_another_workout_timer/issues/113)) ([12c4757](https://github.com/blockbasti/just_another_workout_timer/commit/12c4757ba8767a5ed239bd0373f6e7432f477207))
+
+
+
+## [1.11.1](https://github.com/blockbasti/just_another_workout_timer/compare/v1.11.0...v1.11.1) (2022-02-18)
+
+
+### Bug Fixes
+
+* crash when loading TTS (fixes [#108](https://github.com/blockbasti/just_another_workout_timer/issues/108)) ([1cdd6b5](https://github.com/blockbasti/just_another_workout_timer/commit/1cdd6b57e68963043de2feb8a5eeddd00cc22615))
+
+
+
+# [1.11.0](https://github.com/blockbasti/just_another_workout_timer/compare/v1.10.0...v1.11.0) (2022-02-07)
+
+
+### Bug Fixes
+
+* avoid negative time on exercise ([#106](https://github.com/blockbasti/just_another_workout_timer/issues/106)) ([0cefe4f](https://github.com/blockbasti/just_another_workout_timer/commit/0cefe4f9de797cf7f2678c4e4ccee53b3efd080e))
+* fix crash with no TTS service installed (fixes [#108](https://github.com/blockbasti/just_another_workout_timer/issues/108)) ([b087fb5](https://github.com/blockbasti/just_another_workout_timer/commit/b087fb54b606168e4ca2d409ae675f871e44bbbf))
+
+
+### Features
+
+* use Material3 ([6ef7858](https://github.com/blockbasti/just_another_workout_timer/commit/6ef7858c93de57af785860a6d853619f0ae57853))
+
+
+
 # [1.10.0](https://github.com/blockbasti/just_another_workout_timer/compare/v1.9.1...v1.10.0) (2022-01-25)
 
 
